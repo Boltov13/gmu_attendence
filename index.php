@@ -6,11 +6,17 @@
 </head>
 <body>
     <div class="container mt-4">
-        <form method="post" action="vendor/seek.php">
-            <p>Проверка посещаемости курсанта/студента</p>
-            <input type="text" name="seek_secondname" placeholder="Введите фамилию"> <br>
-            <input type="text" name="seek_firstname" placeholder="Введите имя"> <br>
-            <input type="text" name="seek_thirdname" placeholder="Введите отчество"> <br>
+        <form method="post" action="vendor/seekUserByName">
+            <p>Проверка посещаемости курсанта</p>
+            <label>
+                <input type="text" name="seek_secondname" placeholder="Введите фамилию">
+            </label>
+            <label>
+                <input type="text" name="seek_firstname" placeholder="Введите имя">
+            </label>
+            <label>
+                <input type="text" name="seek_thirdname" placeholder="Введите отчество">
+            </label>
             <button type="submit" class="btn btn-success">Найти</button>
         </form>
     </div>
