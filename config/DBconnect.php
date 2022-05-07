@@ -3,9 +3,9 @@ $servername = "localhost";
 $database = "gmudatabase";
 $username = "boltov";
 $password = "Olesya29!";
-// Создаем соединение
+#Создаем соединение
 $connection = mysqli_connect($servername, $username, $password, $database);
-// Проверяем соединение
+#Проверяем соединение
 if (!$connection) {
     die("Connection failed: " . mysqli_connect_error());
 }
