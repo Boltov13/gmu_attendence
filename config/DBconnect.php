@@ -11,6 +11,6 @@ function DBconnect(): mysqli
     if (!$connection) {
         die("Connection failed: " . mysqli_connect_error());
     }
-    echo "Connected successfully!\n";
+    echo "";
     return $connection;
 }
