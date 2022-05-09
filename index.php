@@ -14,7 +14,7 @@ require_once 'config/DBconnect.php';
         <form method="post" action="vendor/seekAttendance.php">
             <p class="text-uppercase fw-bold text-success">Проверка посещаемости курсанта</p>
             <label>
-                <input type="text" name="seekUserSecondname" placeholder="Введите фамилию">
+                <input type="text" name="seekUserSecondname" placeholder="Введите фамилию *">
             </label>
             <label>
                 <input type="text" name="seekUserFirstname" placeholder="Введите имя">
