@@ -9,8 +9,10 @@ $thirdname_seek = $_POST['seekUserThirdname'];
 if (empty($secondname_seek)) {
     echo 'По вашему запросу нет результатов';
 }
-else {
+else
+{
     $firstname_seek = mysqli_query(DBconnect(), query: "SELECT first_name FROM users WHERE second_name=$secondname_seek");
+    var_dump($firstname_seek);
     $thirdname_seek = mysqli_query(DBconnect(), query: "SELECT third_name FROM users WHERE third_name=$thirdname_seek");
     $seekUserQuery = ("SELECT * FROM users WHERE  
     second_name='$secondname_seek'");
@@ -36,6 +38,7 @@ else {
         echo "\nthirdname = ", $row[4];
         echo "\ngroup = ", $row[5];
     }
+
     $attendance = mysqli_query(DBconnect(), $seekAttendanceQuery);
     $the_rows = array();
 #перебираю массив на строки
