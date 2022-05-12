@@ -7,9 +7,30 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Авторизация</title>
+    <title>Вход в ЭМКУ</title>
 </head>
 <body>
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">ЭМКУ</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="http://localhost">Домашння страница</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Проверить легитимность украины</a>
+                </li>
+            </ul>
+            <form class="d-flex" action="auth.php">
+                <button class="btn btn-outline-light btn-white">Вход в ЭМКУ</button>
+            </form>
+        </div>
+    </div>
+</nav>
 <section class="vh-100">
     <div class="container-fluid">
         <div class="row">
@@ -22,12 +43,12 @@
 
                 <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5">
 
-                    <form style="width: 23rem; margin-top: 100px;">
+                    <form style="width: 23rem; margin-bottom: 150px">
 
                         <h3 class="fw-normal mb-3 pb-3 text-uppercase" style="letter-spacing: 1px;">Вход в ЭМКУ</h3>
 
                         <div class="form-outline mb-4">
-                            <input type="email" id="form2Example18" class="form-control form-control-lg" placeholder="Логин" />
+                            <input type="text" id="form2Example18" class="form-control form-control-lg" placeholder="Логин" />
                         </div>
 
                         <div class="form-outline mb-4">
