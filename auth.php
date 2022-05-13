@@ -1,75 +1,64 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en">
 <head>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Вход в ЭМКУ</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>Вход в Глаз</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/sign-in/">
+
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+
+
+    <!-- Custom styles for this template -->
+    <link href="css/sign.css" rel="stylesheet">
 </head>
-<body>
-<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">ЭМКУ</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="http://localhost">Домашння страница</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Проверить легитимность украины</a>
-                </li>
-            </ul>
-            <form class="d-flex" action="auth.php">
-                <button class="btn btn-outline-light btn-white">Вход в ЭМКУ</button>
-            </form>
+<body class="text-center bg-dark">
+
+<main class="form-signin">
+    <form>
+        <img class="mb-4" src="img/top_logo.png" alt="" width="100" height="100">
+        <h1 class="h3 mb-3 fw-normal">Вход в систему</h1>
+
+        <div class="form-floating bg-dark">
+            <input type="text" class="form-control bg-dark" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">Логин</label>
         </div>
-    </div>
-</nav>
-<section class="vh-100">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-6 text-black">
-
-                <div class="px-5 ms-xl-4">
-                    <i class="fas fa-crow fa-2x me-3 pt-5 mt-xl-4" style="color: #625e5e;">Государственный Морской Университет имени Ф.Ф.Ушакова</i>
-                    <span class="h1 fw-bold mb-0"></span>
-                </div>
-
-                <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5">
-
-                    <form style="width: 23rem; margin-bottom: 150px">
-
-                        <h3 class="fw-normal mb-3 pb-3 text-uppercase" style="letter-spacing: 1px;">Вход в ЭМКУ</h3>
-
-                        <div class="form-outline mb-4">
-                            <input type="text" id="form2Example18" class="form-control form-control-lg" placeholder="Логин" />
-                        </div>
-
-                        <div class="form-outline mb-4">
-                            <input type="password" id="form2Example28" class="form-control form-control-lg" placeholder="Пароль" />
-                        </div>
-
-                        <div class="pt-1 mb-4">
-                            <button class="btn text-white bg-dark btn-lg btn-block" type="button">Войти</button>
-                        </div>
-
-                    </form>
-
-                </div>
-
-            </div>
-            <div class="col-sm-6 px-0 d-none d-sm-block">
-                <img src="img/logo.jpg"
-                     alt="Login image" class="w-100 vh-100" style="object-fit: cover; object-position: left;">
-            </div>
+        <div class="form-floating bg-dark">
+            <input type="password" class="form-control bg-dark" id="floatingPassword" placeholder="Password">
+            <label for="floatingPassword">Пароль</label>
         </div>
-    </div>
-</section>
+
+        <div class="checkbox mb-3">
+            <label class="">
+                <input type="checkbox" value="remember-me"> Запомнить меня
+            </label>
+        </div>
+        <button class="w-100 btn btn-lg btn-dark border-white" type="submit">Войти</button>
+        <p class="mt-5 mb-3 text-muted">&copy; 2T GROUP</p>
+    </form>
+</main>
 </body>
 </html>

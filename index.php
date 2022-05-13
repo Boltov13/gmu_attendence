@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Проект</title>
+    <title>Глаз</title>
 
     <!-- линк на бс -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -26,37 +26,37 @@
 
 
     <!-- кастомные стили-->
-    <link href="css/cover.css" rel="stylesheet">
+    <link href="css/mainpage.css" rel="stylesheet">
 </head>
 <body class="d-flex h-100 text-center text-white bg-dark">
 
 <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
     <header class="mb-auto">
         <div>
-            <h3 class="float-md-start mb-0">СОР</h3>
+
+            <h3 class="float-md-start mb-0">Глаз</h3>
             <nav class="nav nav-masthead justify-content-center float-md-end">
-                <a class="nav-link active" aria-current="page" href="">Посещаемость</a>
+                <a class="nav-link active" aria-current="page" href="">Главная</a>
                 <a class="nav-link" href="#">Успеваемость</a>
-                <a class="nav-link" href="#">Контакты</a>
+                <a class="nav-link" href="#">Посещаемость</a>
                 <a href="auth.php" class="nav-link">Вход</a>
             </nav>
         </div>
     </header>
 
     <main class="px-3">
-        <h1>Здравсвуйте!</h1>
+        <h1>Здравствуйте!</h1>
         <p class="lead">
-            Наш проект - Система осведомления родителей.
-            Разработан специально для Государственного Морского Университета Ф.Ф. Ушакова,
-            с целью осведомления родителей о жизни студента в Университете.
+            Наш проект - Глаз.
+            Разработан с целью осведомления родителей о жизни студента в Университете.
         </p>
         <p class="lead">
-            <a href="#" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Читать больше о нас</a>
+            <a href="#" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Читать больше</a>
         </p>
     </main>
 
     <footer class="mt-auto text-white-50">
-        <p>Разработка 2T project</a></p>
+        <p>From 2T GROUP to AUMSU</a></p>
     </footer>
 </div>
 </body>
