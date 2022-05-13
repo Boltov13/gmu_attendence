@@ -3,7 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Глаз</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <title>Глаз - жизнь студента в ВУЗЕ</title>
 
     <!-- линк на бс -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
