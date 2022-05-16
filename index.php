@@ -34,7 +34,7 @@
 <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
     <header class="mb-auto">
         <div>
-
+            <a href="index.php" class="navbar-brand float-md-start"><img src="img/global_white_eye.png" class="d-inline-block align-text-top" width="40" alt=""></a>
             <h3 class="float-md-start mb-0">Глаз</h3>
             <nav class="nav nav-masthead justify-content-center float-md-end">
                 <a class="nav-link active" aria-current="page" href="">Главная</a>
@@ -46,7 +46,7 @@
     </header>
 
     <main class="px-3">
-        <h1>Здравствуйте!</h1>
+        <h2>Здравствуйте!</h2>
         <p class="lead">
             Наш проект - Глаз.
             Разработан с целью осведомления родителей о жизни студента в Университете.

@@ -33,11 +33,11 @@
             <h1 class="h3 mb-3 fw-normal text-light">Вход в систему</h1>
 
             <div class="form-floating bg-dark">
-                <input type="text" class="form-control bg-dark text-secondary border-secondary" id="floatingInput" placeholder="name@example.com">
+                <input type="text" class="form-control bg-dark text-secondary border-secondary border-white" id="floatingInput" placeholder="name@example.com">
                 <label for="floatingInput">Логин</label>
             </div>
             <div class="form-floating bg-dark">
-                <input type="password" class="form-control bg-dark text-secondary border-secondary" id="floatingPassword" placeholder="Password">
+                <input type="password" class="form-control bg-dark text-secondary border-secondary border-white" id="floatingPassword" placeholder="Password">
                 <label for="floatingPassword">Пароль</label>
             </div>
 

@@ -51,3 +51,7 @@ body {
     color: #fff;
     border-bottom-color: #fff;
 }
+
+.navbar-brand {
+    padding: 0rem;
+}
