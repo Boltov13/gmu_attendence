@@ -10,7 +10,7 @@
     <meta name="author" content="Tovstyak Ilya and Tulchinsiy Mark in 2T group">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/sign.css" rel="stylesheet">
+    <link href="css/signin.css" rel="stylesheet">
     <title>Вход в Глаз</title>
 
     <style>
