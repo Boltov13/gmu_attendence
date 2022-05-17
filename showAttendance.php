@@ -1,12 +1,16 @@
 <?php
     session_start();
-?>
+    require_once 'config/DBconnect.php';
+    DBconnect();
+    include 'vendor/seekAttendance.php';
+    ?>
+
 <!doctype html>
 <html lang="ru">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Профиль студента - Глаз</title>
+    <title>Посещаемость студента - Глаз</title>
     <link href="css/bootstrap.css" rel="stylesheet">
 
     <style>
@@ -50,13 +54,13 @@
             <div class="position-sticky pt-3">
                 <ul class="nav flex-column">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">
+                        <a class="nav-link" aria-current="page" href="profile.php">
                             <span data-feather="home"></span>
                             Профиль
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="showAttendance.php">
+                        <a class="nav-link active" href="vendor/seekAttendance.php">
                             <span data-feather="file"></span>
                             Посещаемость
                         </a>
@@ -83,14 +87,35 @@
         </nav>
 
         <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-            <h2>Студент
+            <h2>Отчёт о посещаемости
                 <?php
                 print_r($_SESSION['user']);
                 ?>
             </h2>
+            <div class="table-responsive">
+                <table class="table table-striped table-sm">
+                    <thead>
+                    <tr>
+                        <th scope="col">№</th>
+                        <th scope="col">Дата</th>
+                        <th scope="col">Предмет</th>
+                        <th scope="col">Преподаватель</th>
+                        <th scope="col">Причина</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>19.03.2022</td>
+                        <td>ТУС</td>
+                        <td>Бородин Е.В.</td>
+                        <td>Неуважительная</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
         </main>
     </div>
 </div>
-<script src="js/bootstrap.min.js"></script>
 </body>
 </html>

@@ -1,6 +1,5 @@
 <?php
     session_start();
-
 ?>
 <!doctype html>
 <html lang="ru">
@@ -57,7 +56,7 @@
                 if ($_SESSION['message']) {
                     echo '
                             <div class="alert alert-dark" role="alert">' . $_SESSION['message'] . '
-                            <a href="#" class="alert-link">Обратиться к администратору</a>
+                            <a href="https://t.me/Ilya_Boltov" class="alert-link">Обратиться к администратору</a>
                             </div>';
                 }
                 unset($_SESSION['message']);
@@ -66,5 +65,6 @@
             <p class="mt-5 mb-3 text-muted">&copy;2T GROUP</p>
         </form>
     </main>
+    <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
