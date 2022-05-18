@@ -10,3 +10,4 @@
 
     $seekAttendanceByID = mysqli_query(DBconnect(), $seekRequest);
     $seekResult = mysqli_fetch_assoc($seekAttendanceByID);
+    $seekFETCH = mysqli_fetch_all($seekAttendanceByID);

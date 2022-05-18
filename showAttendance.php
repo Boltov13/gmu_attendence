@@ -3,8 +3,17 @@
     require_once 'config/DBconnect.php';
     DBconnect();
     include 'vendor/seekAttendance.php';
-    ?>
 
+    $userID = $_SESSION['user']['id'];
+    $userLOGIN = $_SESSION['user']['auth_login'];
+
+    $seekRequest = "select * from attendence where student_id=
+                    (select account_id from accounts where login='$userLOGIN')";
+
+    $seekAttendanceByID = mysqli_query(DBconnect(), $seekRequest);
+    $seekResult = mysqli_fetch_assoc($seekAttendanceByID);
+    $seekFETCH = mysqli_fetch_all($seekAttendanceByID);
+?>
 <!doctype html>
 <html lang="ru">
 <head>
@@ -60,7 +69,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="vendor/seekAttendance.php">
+                        <a class="nav-link active" href="showAttendance.php">
                             <span data-feather="file"></span>
                             Посещаемость
                         </a>
@@ -89,7 +98,7 @@
         <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
             <h2>Отчёт о посещаемости
                 <?php
-                print_r($_SESSION['user']);
+                print_r($_SESSION['user']); #TODO выводить имя пользователя
                 ?>
             </h2>
             <div class="table-responsive">
@@ -105,11 +114,11 @@
                     </thead>
                     <tbody>
                     <tr>
-                        <td>1</td>
-                        <td>19.03.2022</td>
-                        <td>ТУС</td>
-                        <td>Бородин Е.В.</td>
-                        <td>Неуважительная</td>
+                        <td>1,001</td>
+                        <td>random</td>
+                        <td>data</td>
+                        <td>placeholder</td>
+                        <td>text</td>
                     </tr>
                     </tbody>
                 </table>
