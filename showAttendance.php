@@ -1,18 +1,6 @@
 <?php
     session_start();
-    require_once 'config/DBconnect.php';
-    DBconnect();
-    include 'vendor/seekAttendance.php';
-
-    $userID = $_SESSION['user']['id'];
-    $userLOGIN = $_SESSION['user']['auth_login'];
-
-    $seekRequest = "select * from attendence where student_id=
-                    (select account_id from accounts where login='$userLOGIN')";
-
-    $seekAttendanceByID = mysqli_query(DBconnect(), $seekRequest);
-    $seekResult = mysqli_fetch_assoc($seekAttendanceByID);
-    $seekFETCH = mysqli_fetch_all($seekAttendanceByID);
+    include('config/DBconnect.php');
 ?>
 <!doctype html>
 <html lang="ru">
@@ -98,7 +86,7 @@
         <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
             <h2>Отчёт о посещаемости
                 <?php
-                print_r($_SESSION['user']); #TODO выводить имя пользователя
+                print_r($_SESSION['user']['auth_login']);
                 ?>
             </h2>
             <div class="table-responsive">
@@ -113,13 +101,34 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <td>1,001</td>
-                        <td>random</td>
-                        <td>data</td>
-                        <td>placeholder</td>
-                        <td>text</td>
-                    </tr>
+                        <?php 
+                            $query = "SELECT * FROM `attendence` WHERE `student_id`=
+                            (SELECT `account_id` FROM `accounts` WHERE `login`='tostiak1141')";
+                            $statement = $pdo->prepare($query);
+                            $statement->execute();
+
+                            $result = $statement->fetchAll();
+                            if ($result) {
+                                foreach($result as $row) {
+                                    ?>
+                                        <tr>
+                                            <td><?= $row['student_id'] ?></td>
+                                            <td><?= $row['date'] ?></td>
+                                            <td><?= $row['subject'] ?></td>
+                                            <td><?= $row['teacher'] ?></td>
+                                            <td><?= $row['reason'] ?></td>
+                                        </tr>
+                                    <?php
+                                }
+                            }
+                            else {
+                                ?>
+                                <tr>
+                                    <td colspan="5">Пропусков не обнаружено!</td>
+                                </tr>
+                                <?php
+                            }
+                        ?>
                     </tbody>
                 </table>
             </div>

@@ -1,15 +1,16 @@
 <?php
-function DBconnect(): mysqli
-{
     $servername = "localhost";
-    $database = "gmudatabase";
     $username = "boltov";
     $password = "Olesya29!";
-#Создаем соединение
-    $connection = mysqli_connect($servername, $username, $password, $database);
-#Проверяем соединение
-    if (!$connection) {
-        die("Connection failed: " . mysqli_connect_error());
+    $database = "gmudatabase";
+
+    try {
+
+    $dsn = 'mysql:host=localhost;dbname=gmudatabase';
+    $pdo = new PDO($dsn, 'boltov', 'Olesya29!');
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    echo "Success!";
+
+    } catch (PDOException $e) {
+        echo "Connection failed" .$e->getMessage();
     }
-    return $connection;
-}
