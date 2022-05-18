@@ -85,7 +85,7 @@
         <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
             <h2>Студент
                 <?php
-                print_r($_SESSION['user']);
+                print_r($_SESSION['user']['auth_login']);
                 ?>
             </h2>
         </main>

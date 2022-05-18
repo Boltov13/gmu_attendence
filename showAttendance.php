@@ -102,17 +102,20 @@
                     </thead>
                     <tbody>
                         <?php 
+                            $username = $_SESSION['user']['auth_login'];
                             $query = "SELECT * FROM `attendence` WHERE `student_id`=
-                            (SELECT `account_id` FROM `accounts` WHERE `login`='tostiak1141')";
+                            (SELECT `account_id` FROM `accounts` WHERE `login`='$username')";
+
                             $statement = $pdo->prepare($query);
                             $statement->execute();
+                            $counter = 0;
 
                             $result = $statement->fetchAll();
                             if ($result) {
-                                foreach($result as $row) {
+                                foreach($result as $row) { $counter ++;
                                     ?>
                                         <tr>
-                                            <td><?= $row['student_id'] ?></td>
+                                            <td><?= $counter ?></td>
                                             <td><?= $row['date'] ?></td>
                                             <td><?= $row['subject'] ?></td>
                                             <td><?= $row['teacher'] ?></td>
