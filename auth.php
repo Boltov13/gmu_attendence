@@ -62,7 +62,7 @@
                 unset($_SESSION['message']);
             ?>
 
-            <p class="mt-5 mb-3 text-muted">&copy;2T GROUP</p>
+            <p class="mt-5 mb-3 text-muted">&copy;TTL GROUP</p>
         </form>
     </main>
     <script src="js/bootstrap.min.js"></script>

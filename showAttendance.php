@@ -7,6 +7,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <title>Посещаемость студента - Глаз</title>
     <link href="css/bootstrap.css" rel="stylesheet">
 
@@ -27,7 +28,7 @@
     </style>
 
 
-    <!-- Custom styles for this template -->
+
     <link href="css/profile_style.css" rel="stylesheet">
 </head>
 <body>
@@ -63,19 +64,19 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="showAttendance.php">
                             <span data-feather="file"></span>
                             Успеваемость
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="showPrivateCard.php">
                             <span data-feather="file"></span>
                             Личная карточка студента
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="showTeachers.php">
                             <span data-feather="file"></span>
                             Преподавательский состав
                         </a>
@@ -90,7 +91,7 @@
                 ?>
             </h2>
             <div class="table-responsive">
-                <table class="table table-striped table-sm">
+                <table class="table table-striped table-sm table-bordered">
                     <thead>
                     <tr>
                         <th scope="col">№</th>

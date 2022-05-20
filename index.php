@@ -29,7 +29,7 @@
     </style>
 
 
-    <!-- кастомные стили-->
+
     <link href="css/mainpage.css" rel="stylesheet">
 </head>
 <body class="d-flex h-100 text-center text-white bg-dark">
@@ -60,7 +60,7 @@
     </main>
 
     <footer class="mt-auto text-white-50">
-        <p>From 2T GROUP to AUMSU</a></p>
+        <p>From TTL GROUP to AUMSU</a></p>
     </footer>
 </div>
 </body>

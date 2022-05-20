@@ -6,6 +6,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <title>Профиль студента - Глаз</title>
     <link href="css/bootstrap.css" rel="stylesheet">
 
@@ -62,19 +63,19 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="showMarks.php">
                             <span data-feather="file"></span>
                             Успеваемость
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="showPrivateCard.php">
                             <span data-feather="file"></span>
                             Личная карточка студента
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="showTeachers.php">
                             <span data-feather="file"></span>
                             Преподавательский состав
                         </a>
