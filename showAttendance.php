@@ -64,7 +64,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="showAttendance.php">
+                        <a class="nav-link" href="showMarks.php">
                             <span data-feather="file"></span>
                             Успеваемость
                         </a>
