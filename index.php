@@ -41,7 +41,7 @@
             <h3 class="float-md-start mb-0">Глаз</h3>
             <nav class="nav nav-masthead justify-content-center float-md-end">
                 <a class="nav-link active" aria-current="page" href="">Главная</a>
-                <a class="nav-link" href="#">Быстрая проверка</a>
+                <a class="nav-link" href="seekForm.php">Быстрая проверка</a>
                 <a class="nav-link" href="#">FAQ</a>
                 <a href="auth.php" class="nav-link">Вход</a>
             </nav>

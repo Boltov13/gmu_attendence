@@ -69,7 +69,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="showPersonalCard.php">
+                            <a class="nav-link" href="showPrivateCard.php">
                                 <span data-feather="file"></span>
                                 Личная карточка студента
                             </a>
