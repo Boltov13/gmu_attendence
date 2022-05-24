@@ -8,7 +8,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <title>Профиль студента - Глаз</title>
+    <title>Быстрая проверка - Глаз</title>
     <link href="css/bootstrap.css" rel="stylesheet">
 
     <style>
@@ -28,7 +28,7 @@
     </style>
 
 
-    <!-- Custom styles for this template -->
+    <!-- Cвои стили-->
     <link href="css/profile_style.css" rel="stylesheet">
 </head>
 <body>
@@ -88,7 +88,12 @@
             <h2>Студент
                 <?php
 
-                print_r($_SESSION['user']['auth_login']);
+                print($_SESSION['user']['second_name']); 
+                print(" ");
+                print_r($_SESSION['user']['first_name']);
+                print(" ");
+                print_r($_SESSION['user']['third_name']);
+                
                 ?>
             </h2>
         </main>
