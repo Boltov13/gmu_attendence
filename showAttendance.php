@@ -34,7 +34,7 @@
 <body>
 
 <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-    <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">Глаз</a>
+    <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="profile.php">Глаз</a>
     <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -85,11 +85,7 @@
         </nav>
 
         <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-            <h2>Отчёт о посещаемости
-                <?php
-                print_r($_SESSION['user']['auth_login']);
-                ?>
-            </h2>
+            <h2>Отчёт о посещаемости</h2>
             <div class="table-responsive">
                 <table class="table table-striped table-sm table-bordered">
                     <thead>
@@ -103,9 +99,9 @@
                     </thead>
                     <tbody>
                         <?php 
-                            $username = $_SESSION['user']['auth_login'];
+                            $username = $_SESSION['user']['student_card'];
                             $query = "SELECT * FROM `attendence` WHERE `student_id`=
-                            (SELECT `account_id` FROM `accounts` WHERE `login`='$username')";
+                            (SELECT `id` FROM `users` WHERE `student_ticket`='$username')";
 
                             $statement = $pdo->prepare($query);
                             $statement->execute();
