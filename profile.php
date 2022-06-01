@@ -34,7 +34,7 @@
 <body>
 
 <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-    <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">Глаз</a>
+    <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-5" href="#">Глаз</a>
     <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -85,7 +85,7 @@
         </nav>
 
         <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-            <h2>Студент
+            <h2 style="margin: 10px; padding:10px;" class="fs-1">
                 <?php
 
                 print($_SESSION['user']['second_name']); 
@@ -93,9 +93,31 @@
                 print_r($_SESSION['user']['first_name']);
                 print(" ");
                 print_r($_SESSION['user']['third_name']);
-                
+
                 ?>
             </h2>
+
+
+            <div class="card border-dark" style="margin: 10px;">
+                <div class="card-body text-dark">
+                    <h4 class="fs-5">Учебная группа № <?php print($_SESSION['user']['study_group']); ?></h4>
+                </div>
+            </div>
+            <div class="card border-dark" style="margin: 10px;">
+                <div class="card-body text-dark">
+                    <h4 class="fs-5">Факультет: <?php print($_SESSION['user']['direction']); ?></h4>
+                </div>
+            </div>
+            <div class="card border-dark" style="margin: 10px;">
+                <div class="card-body text-dark">
+                    <h4 class="fs-5">Курс: <?php print($_SESSION['user']['year']); ?></h4>
+                </div>
+            </div>
+            <div class="card border-dark" style="margin: 10px;">
+                <div class="card-body text-dark">
+                    <h4 class="fs-5">Курсантский билет № <?php print($_SESSION['user']['student_card']); ?></h4>
+                </div>
+            </div>
         </main>
     </div>
 </div>

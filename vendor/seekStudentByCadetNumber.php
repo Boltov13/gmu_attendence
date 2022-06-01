@@ -20,7 +20,7 @@
             "first_name" => $user['first_name'],
             "second_name" => $user['second_name'],
             "third_name" => $user['third_name'],
-            "study_group" => $user['stude_group'],
+            "study_group" => $user['study_group'],
             "direction" => $user['direction'],
             "year" => $user['year']
         ];

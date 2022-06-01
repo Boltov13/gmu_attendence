@@ -41,7 +41,7 @@
                 <input name="seekNumber" type="text" class="form-control bg-dark text-secondary border-secondary border-white" id="floatingInput" placeholder="name@example.com">
                 <label for="floatingInput">Номер билета</label>
             </div>
-            <button class="w-100 btn btn-lg btn-success border-dark" type="submit">Найти</button>
+            <button class="w-100 btn btn-lg btn-success border-dark" type="submit" style="margin-top: 20px;">Найти</button>
             <?php
             ini_set(error_reporting(0), 0);
                 if ($_SESSION['message']) {
