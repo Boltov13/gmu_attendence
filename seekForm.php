@@ -55,6 +55,5 @@
             <p class="mt-5 mb-3 text-muted">&copy;TTL GROUP</p>
         </form>
     </main>
-    <script src="js/bootstrap.min.js"></script>
 </body>
 </html>

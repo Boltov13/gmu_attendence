@@ -38,7 +38,6 @@
     <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <input class="form-control form-control-dark w-100" type="text" placeholder="Поиск по сайту.." aria-label="Search">
     <div class="navbar-nav">
         <div class="nav-item text-nowrap">
             <a class="nav-link px-3" href="vendor/logout.php">Выйти</a>
@@ -81,9 +80,20 @@
                             Преподавательский состав
                         </a>
                     </li>
+                    
+                    <?php 
+                        if ($_SESSION['user']['user_role'] != 'Курсант') {
+                            echo '<li class="nav-item">
+                                    <a class="nav-link" href="reports.php">
+                                        <span data-feather="file"></span>
+                                        Отчёты
+                                    </a>
+                                    </li>';
+                        }
+                    ?>
+
                 </ul>
         </nav>
-
         <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
             <h2 style="margin: 10px; padding:10px;" class="fs-1">
                 <?php
@@ -96,7 +106,6 @@
 
                 ?>
             </h2>
-
 
             <div class="card border-dark" style="margin: 10px;">
                 <div class="card-body text-dark">
@@ -116,6 +125,11 @@
             <div class="card border-dark" style="margin: 10px;">
                 <div class="card-body text-dark">
                     <h4 class="fs-5">Курсантский билет № <?php print($_SESSION['user']['student_card']); ?></h4>
+                </div>
+            </div>
+            <div class="card border-dark" style="margin: 10px;">
+                <div class="card-body text-dark">
+                    <h4 class="fs-5">Роль: <?php print($_SESSION['user']['user_role']); ?></h4>
                 </div>
             </div>
         </main>
