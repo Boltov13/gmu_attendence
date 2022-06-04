@@ -1,6 +1,5 @@
 <?php 
     session_start();
-    include 'config/DBconnect.php';
 ?>
 
 <!doctype html>

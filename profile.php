@@ -51,7 +51,7 @@
             <div class="position-sticky pt-3">
                 <ul class="nav flex-column">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">
+                        <a class="nav-link active" aria-current="page" href="profile.php">
                             <span data-feather="home"></span>
                             Профиль
                         </a>
@@ -84,7 +84,7 @@
                     <?php 
                         if ($_SESSION['user']['user_role'] != 'Курсант') {
                             echo '<li class="nav-item">
-                                    <a class="nav-link" href="reports.php">
+                                    <a class="nav-link text-danger" href="reports.php">
                                         <span data-feather="file"></span>
                                         Отчёты
                                     </a>
@@ -135,6 +135,6 @@
         </main>
     </div>
 </div>
-<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

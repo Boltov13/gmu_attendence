@@ -1,6 +1,8 @@
 <?php
     session_start();
     include('config/DBconnect.php');
+
+    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,6 +35,7 @@
                             $counter = 0;
 
                             $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+                            
                             if ($result) {
                                 foreach($result as $row) { $counter ++;
                                     ?>
@@ -43,7 +46,7 @@
                                             </td>
                                             <td>
                                                 <input class="form-check-input" type="checkbox" id="defaultCheck1" name="absent[]" value=
-                                                "<?php echo $row['second_name']; echo $row['first_name']; echo $row['third_name'] ?>">
+                                                "<?php echo $row['student_ticket'] ?>">
                                             </td>
                                         </tr>
                                     <?php
