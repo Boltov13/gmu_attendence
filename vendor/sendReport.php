@@ -33,6 +33,6 @@
         print "okey suka";
     }
     else {
-        "huyna"
+        "huyna";
     }
 ?>
