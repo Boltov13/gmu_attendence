@@ -1,8 +1,6 @@
 <?php
     session_start();
-    include('config/DBconnect.php');
-
-    
+    include('config/DBconnect.php');     
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,6 +14,14 @@
 <body>
             <h2>Создать отчёт о посещаемости</h2>
             <form action="vendor/checkReport.php" method="POST">
+            <input type="date" name="date_selector">
+                <select class="form-select" id="floatingSelect" name="sendSubject[]">
+                    <option selected>Выбрать..</option>
+                    <option value="Математика">Матем</option> 
+                    <option value="ТУС">Тус</option>
+                    <option value="БЖД">БЖД</option>
+                    <option value="ОПЗ">ОПЗ</option>
+                </select>
             <div class="table-responsive">
                 <table class="table table-striped table-sm table-bordered">
                     <thead>
@@ -35,12 +41,13 @@
                             $counter = 0;
 
                             $result = $statement->fetchAll(PDO::FETCH_ASSOC);
-                            
                             if ($result) {
                                 foreach($result as $row) { $counter ++;
                                     ?>
                                         <tr>
-                                            <td><?= $counter ?></td>
+                                            <td>
+                                                <?= $counter ?>
+                                            </td>
                                             <td>
                                                 <?php print($row['second_name']); print(' '); print($row['first_name']); print(' '); print($row['third_name']);  ?>
                                             </td>
@@ -55,7 +62,7 @@
                             else {
                                 ?>
                                 <tr>
-                                    <td colspan="5">Ошибка! Обратитесь к администратору!</td>
+                                    <td colspan="5">Ошибка! Обратитесь к администратору! vk.com/boltov13</td>
                                 </tr>
                                 <?php
                             }

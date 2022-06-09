@@ -80,6 +80,16 @@
                                 Преподавательский состав
                             </a>
                         </li>
+                        <?php 
+                        if ($_SESSION['user']['user_role'] != 'Курсант') {
+                            echo '<li class="nav-item">
+                                    <a class="nav-link text-danger" href="reports.php">
+                                        <span data-feather="file"></span>
+                                        Отчёты
+                                    </a>
+                                    </li>';
+                        }
+                         ?>
                     </ul>
             </nav>
         </div>
