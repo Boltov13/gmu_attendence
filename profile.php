@@ -80,7 +80,6 @@
                             Преподавательский состав
                         </a>
                     </li>
-                    
                     <?php 
                         if ($_SESSION['user']['user_role'] != 'Курсант') {
                             echo '<li class="nav-item">
@@ -132,9 +131,30 @@
                     <h4 class="fs-5">Роль: <?php print($_SESSION['user']['user_role']); ?></h4>
                 </div>
             </div>
+
+            <?php
+                ini_set(error_reporting(0), 0);
+                if ($_SESSION['report']) {
+                    echo '<div class="alert alert-success" role="alert">
+                    <h4 class="alert-heading">Успешно!</h4>
+                    <p>В скором времени преподователь получит ваш отчёт и подтвердит его!</p>
+                </div>';
+                unset($_SESSION['report']);
+                }
+                else if($_SESSION['report_err']) {
+                    echo '<div class="alert alert-danger" role="alert">
+                    <h4 class="alert-heading">Ошибка!</h4>
+                    <p>Отчёт не был отправлен!</p>
+                    <hr>
+                    <p>Проверьте правильность введённых данных и повторите попытку!</p>
+                </div>';
+                unset($_SESSION['report_err']);
+                }
+            ?>
         </main>
     </div>
 </div>
+<script src="js/bootstrap.min.js"></script>
 <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

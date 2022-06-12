@@ -1,3 +1,4 @@
+//НЕИСПОЛЬЗУЕТСЯ!
 <?php 
 
     session_start();
@@ -62,7 +63,7 @@
                                             </td>
                                             <td>
                                             <select class="form-select" id="floatingSelect" name="sendAbsent[]">
-                                                <option selected>Выбрать..</option>
+                                                <option selected>Присутствовал</option>
                                                 <option value="<?php echo $row['student_ticket']; echo 'NP'; ?>">Неуважительная</option> 
                                                 <option value="<?php echo $row['student_ticket']; echo 'C'; ?>">Служебная</option>
                                                 <option value="<?php echo $row['student_ticket']; echo 'B'; ?>">Болезнь</option>
