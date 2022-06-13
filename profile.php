@@ -89,6 +89,14 @@
                                     </a>
                                     </li>';
                         }
+                        else if ($_SESSION['user']['user_role'] == 'Преподаватель') {
+                            echo '<li class="nav-item">
+                            <a class="nav-link text-success" href="reports.php">
+                                <span data-feather="file"></span>
+                                Отчёты
+                            </a>
+                            </li>';
+                        }
                     ?>
 
                 </ul>

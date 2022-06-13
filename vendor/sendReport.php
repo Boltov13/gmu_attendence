@@ -26,10 +26,11 @@
                 $absentInfo = divide_sample($str);
                 $absentInfo[2] = $absentDate;
                 $absentInfo[3] = $absentSubject;  
+                $id = rand($min = 0, $max = 999999999);
 
                 if($absentInfo[1] != '') {
 
-                    $query = "INSERT INTO `gmudatabase`.`temp_attendance` (`student_ticket`, `date`, `subject`, `leader`) VALUES ($absentInfo[0], '$absentDate', '$absentSubject', '$leader_id');";
+                    $query = "INSERT INTO `gmudatabase`.`temp_attendance` (`id`, `student_ticket`, `date`, `subject`, `leader`) VALUES ($id, $absentInfo[0], '$absentDate', '$absentSubject', '$leader_id');";
                     $statement = $pdo->prepare($query);
                     $statement->execute();
 
