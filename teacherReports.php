@@ -1,25 +1,25 @@
 <?php 
     session_start();
-    include ('../config/DBconnect.php');
+    include ('config/DBconnect.php');
 
-    $teacherFullname = $_SESSION['user']['second_name'] + $_SESSION['user']['first_name'] + $_SESSION['user']['third_name'];
+    $teacherID = $_SESSION['user']['teacher_id'];
 
-    $query = "SELECT * FROM temp_attendance WHERE subject_teacher='$teacherFullname'";
+    $query = "SELECT * FROM temp_attendance WHERE subject_id=(SELECT subject_id FROM subjects WHERE teacher_id=$teacherID)";
     $statement = $pdo->prepare($query);
     $statement->execute();
     $counter = 0;
-    
-    if (($count) > 0) {
-        //Поиск дал резульаты
-        foreach ($result as $row) { $counter ++;
 
-        }
+    $count = $statement->rowCount();
+    $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+    
+    if (($count) > 0) { print 123;
+        //Поиск дал резульаты
+        
 
     } //поиск не дал резульатты
     else {
 
-
+        print 1234;
     }
-
 
 ?>
