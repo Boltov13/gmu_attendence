@@ -17,10 +17,11 @@
 
         $_SESSION['user'] = [
             "id" => $user['account_id'],
-            "auth_login" => $user['login']
+            "auth_login" => $user['login'],
+            "teacher_id" => $user['teacher_id']
         ];
 
-        header('Location: ../profile.php');
+        header('Location: ../teacherReports.php');
     } //неуcпешная авторизация
       else {
 
