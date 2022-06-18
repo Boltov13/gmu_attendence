@@ -1,7 +1,6 @@
 <?php
     session_start();
-    include('config/DBconnect.php'); 
-        
+    include('config/DBconnect.php');   
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,9 +12,14 @@
     <title>Создать отчёт</title>
 </head>
 <body>
-            <h2>Создать отчёт о посещаемости</h2>
+            <h2 class="text-center">Создать отчёт о посещаемости</h2>
             <form action="vendor/sendReport.php" method="POST">
-                <input type="date" name="date_selector">
+                <div class="container">
+                    <div class="row" style="margin-bottom: 10px;">
+                        <div class="col-lg-6">
+                        <input type="date" name="date_selector">
+                        </div>
+                        <div class="col-lg-6">
                     <select class="form-select" id="floatingSelect" name="sendSubject[]">
                         <option selected>Выбрать..</option>
                         <option value="Математика">Матем</option> 
@@ -23,6 +27,9 @@
                         <option value="БЖД">БЖД</option>
                         <option value="ОПЗ">ОПЗ</option>
                     </select>
+                        </div>
+                    </div>
+                </div>
                 <div class="table-responsive">
                     <table class="table table-striped table-sm table-bordered">
                         <thead>

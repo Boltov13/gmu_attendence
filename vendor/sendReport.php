@@ -30,7 +30,7 @@
 
                 if($absentInfo[1] != '') {
 
-                    $query = "INSERT INTO `gmudatabase`.`temp_attendance` (`id`, `student_ticket`, `date`, `subject`, `leader`) VALUES ($id, $absentInfo[0], '$absentDate', '$absentSubject', '$leader_id');";
+                    $query = "INSERT INTO `gmudatabase`.`temp_attendance` (`id`, `student_ticket`, `date`, `subject`, `leader_id`) VALUES ($id, $absentInfo[0], '$absentDate', '$absentSubject', '$leader_id');";
                     $statement = $pdo->prepare($query);
                     $statement->execute();
 
