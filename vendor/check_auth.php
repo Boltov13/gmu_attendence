@@ -21,7 +21,7 @@
             "teacher_id" => $user['teacher_id']
         ];
 
-        header('Location: ../teacherReports.php');
+        header('Location: ../teacherProfile.php');
     } //неуcпешная авторизация
       else {
 
