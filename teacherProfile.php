@@ -113,7 +113,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Дата: <?php echo $result[0]['date']?></h5>
                         <p class="card-text fs-5">Отправил - <?php echo $leader_Result[0]['second_name']; echo "."; echo " "; echo $firstChrName; echo "."; echo $firstChrThirdName; echo ".";?></p>
-                        <button class="btn btn-success" type="submit" value="<?=$row['id'] ?>" name="SubmitReportID[]">Подтвердить отчёт</button>
+                        <button class="btn btn-success" type="submit" value="<?=$row['id'] ?>" name="SubmitReportID">Подтвердить отчёт</button>
                         </form>
                     </div>
                     </div>

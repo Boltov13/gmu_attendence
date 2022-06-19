@@ -18,21 +18,7 @@
     
     if (($count) > 0) { print 123;
         //Поиск дал резульаты
-       foreach($result as $row) {
-        ?> 
-        <div class="row">
-            <div class="col-sm-6">
-                <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title"></h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-        </div>
-        <?php 
-        
-       }
+
 
     } //поиск не дал резульатты
     else {

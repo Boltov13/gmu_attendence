@@ -18,19 +18,27 @@
     $absentDate = $_POST['date_selector'];
     $absentSubject = $_POST['sendSubject'][0];
     $counter = 0;
+    $study_group = $_SESSION['user']['study_group'];
 
     if (($absentDate != 0) && ($absentSubject != 'Выбрать..')) {
+
+        $query = "SELECT `id` FROM `subjects` WHERE `subject_name` = '$absentSubject'";
+        $statement = $pdo->prepare($query);
+        $statement->execute();
+        $subject_statement = $statement->fetchAll(PDO::FETCH_ASSOC);
+        $subject_id = $subject_statement[0]['id'];
+
+
         echo "<pre>";
             foreach ($sample_number as $str) {
 
                 $absentInfo = divide_sample($str);
                 $absentInfo[2] = $absentDate;
                 $absentInfo[3] = $absentSubject;  
-                $id = rand($min = 0, $max = 999999999);
 
                 if($absentInfo[1] != '') {
 
-                    $query = "INSERT INTO `gmudatabase`.`temp_attendance` (`id`, `student_ticket`, `date`, `subject`, `leader_id`) VALUES ($id, $absentInfo[0], '$absentDate', '$absentSubject', '$leader_id');";
+                    $query = "INSERT INTO `gmudatabase`.`temp_attendance` (`id`, `student_ticket`, `date`, `subject_id`, `leader_id`, `study_group`) VALUES (0, $absentInfo[0], '$absentDate', '$subject_id', '$leader_id', $study_group);";
                     $statement = $pdo->prepare($query);
                     $statement->execute();
 

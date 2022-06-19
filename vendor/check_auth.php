@@ -7,8 +7,8 @@
 
     $query = "SELECT * FROM accounts WHERE login='$auth_login' AND password='$auth_password'";
     $query_run = $pdo->prepare($query);
-
     $query_run->execute();
+    
     $count = $query_run->rowCount();
     
     if (($count) > 0) {
